@@ -1,0 +1,6 @@
+由于django版本为1.9.8，在debug过程中可能部分模块没找到，需要进行以下环境搭建
+pip install MySQL_python-1.2.5-cp27-none-win_amd64.whl
+pip install django-formtools
+pip install httplib2
+pip install six
+pip install Pillow
