@@ -18,7 +18,7 @@ class BugetItem(models.Model):   # 预算科目表
     edit_dept = models.CharField(verbose_name=u"编制部门", null=True, blank=True, max_length=255)
     approve_dept = models.CharField(verbose_name=u"审核部门", null=True, blank=True, max_length=255)
     account_item = models.CharField(verbose_name=u"财务科目", null=True, blank=True, max_length=255)
-    add_user = models.ForeignKey(UserProfile, verbose_name=u"添加用户")
+    add_user = models.ForeignKey(UserProfile, null=True, verbose_name=u"添加用户")
     add_time = models.DateTimeField(verbose_name=u"添加时间", default=datetime.now)
     bk1 = models.CharField(verbose_name=u"备用1", null=True, blank=True, max_length=255)
     bk2 = models.CharField(verbose_name=u"备用2", null=True, blank=True, max_length=255)
