@@ -1,10 +1,11 @@
 # _*_ coding: utf-8 _*_
-__author__ = 'Steven'
-__date__ = '2017/8/20 21:55'
-
 import xadmin
 from xadmin import views
 from users.models import Org
+
+
+__author__ = 'Steven'
+__date__ = '2017/8/20 21:55'
 
 
 class BaseSetting(object):
@@ -22,6 +23,8 @@ class OrgAdmin(object):
     list_display = ["name", "description", "parentID", "add_time"]
     search_fields = ["name", "description", "parentID", "add_time"]
     list_filter = ["name", "description", "parentID", "add_time"]
+    model_icon = 'fa fa-sitemap'
+
 
 xadmin.site.register(views.BaseAdminView, BaseSetting)
 xadmin.site.register(views.CommAdminView, GlobalSettings)
