@@ -12,5 +12,9 @@ class GreenLaneAdmin(object):
     list_filter = ["sum_year", "sum_mon", "roadname", "stationname"]
     model_icon = 'fa fa-sitemap'
 
+    # def save_models(self):
+    #     self.new_obj.addusername = self.request.addusername
+    #     super().save_models()
+
 
 xadmin.site.register(greenlane, GreenLaneAdmin)
